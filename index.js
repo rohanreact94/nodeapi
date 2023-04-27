@@ -42,14 +42,9 @@ const fontroute=require('./routes/Font')
 const frontendapiroute=require('./routes/Frontend')
 
 
-app.get('/',(req, res)=>{ 
+ 
 
-    const filepath=path.join(__dirname, 'index.html');
-    console.log(filepath);
-    res.sendFile(filepath);
-});
-
-
+app.use(express.static("dashboard/build"));
 
 
 
